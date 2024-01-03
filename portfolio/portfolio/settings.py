@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Custom Apps
-    'myportfolio',
+    'myportfolio'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +82,7 @@ DATABASES = {
         'NAME': 'portfolio24',
         'USER': 'root',
         'PASSWORD': '',
+        'HOST': 'localhost',
         'PORT': 3306
     }
 }

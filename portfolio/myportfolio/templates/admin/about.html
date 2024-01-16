@@ -336,6 +336,14 @@
 							<div class="card-header">
 								<h4 class="card-title">Basic Inputs</h4>
 							</div>
+							{% if msg %}
+							{% for i in msg %}
+
+							<div class="alert alert-warning">
+								<h4 class="card-title">{{i}}</h4>
+							</div>
+							{% endfor %}
+							{% endif %}
 							<div class="card-body">
 								<form action="{% url 'about_insert' %}" method="post">
 									{% csrf_token %}
@@ -440,7 +448,8 @@
 												<td>{{i.no_digital_awards}}</td>
 												<td>{{i.description}}</td>
 												<td>{{i.date_time}}</td>
-												<td><a href="{% url 'about_edit' i.id %}" target="_blank">Edit</a>|<a href="{% url 'delete' i.id %}">Delete</a></td>
+												<td><a href="{% url 'about_edit' i.id %}" target="_blank">Edit</a>|<a
+														href="{% url 'delete' i.id %}">Delete</a></td>
 											</tr>
 											{% endfor %}
 										</tbody>

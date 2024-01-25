@@ -176,7 +176,7 @@
 						</div>
 						<a class="dropdown-item" href="profile.html">My Profile</a>
 						<a class="dropdown-item" href="settings.html">Settings</a>
-						<a class="dropdown-item" href="login.html">Logout</a>
+						<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
 					</div>
 				</li>
 				<!-- /User Menu -->
@@ -369,6 +369,12 @@
 										<label class="col-form-label col-md-2">Email</label>
 										<div class="col-md-10">
 											<input type="email" class="form-control" name="email">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-form-label col-md-2">Password</label>
+										<div class="col-md-10">
+											<input type="password" class="form-control" name="password">
 										</div>
 									</div>
 									<div class="form-group row">
